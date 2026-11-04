@@ -1,0 +1,1224 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0F2C59">
+    <title>LA CROISÉE - Agence Immobilière & BTP à Yaoundé</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0F2C59',
+                            gold: '#D4AF37',
+                            light: '#F8FAFC',
+                            accent: '#16a34a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .property-card {
+            animation: fadeIn .35s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .mobile-menu {
+            transition: all .3s ease;
+        }
+
+        .mobile-menu.hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+            <!-- LOGO -->
+            <a href="#accueil" class="flex items-center gap-3 group">
+
+                <div class="w-10 h-10 bg-brand-blue rounded-xl flex items-center justify-center text-brand-gold font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                    LC
+                </div>
+
+                <div>
+                    <span class="text-lg sm:text-xl font-extrabold tracking-tight text-brand-blue block leading-none">
+                        LA CROISÉE
+                    </span>
+
+                    <span class="text-[9px] sm:text-[10px] font-semibold text-slate-400 uppercase tracking-widest">
+                        Agence immobilière 
+                    </span>
+                </div>
+
+            </a>
+
+            <!-- NAVIGATION DESKTOP -->
+            <nav class="hidden md:flex items-center gap-6 lg:gap-8 font-medium text-sm text-slate-600">
+
+                <a href="#accueil" class="hover:text-brand-blue transition-colors">Accueil</a>
+                <a href="#biens" class="hover:text-brand-blue transition-colors">Biens</a>
+                <a href="#services" class="hover:text-brand-blue transition-colors">Services</a>
+                <a href="#avis" class="hover:text-brand-blue transition-colors">Avis</a>
+                <a href="#contact" class="hover:text-brand-blue transition-colors">Contact</a>
+
+            </nav>
+
+            <!-- BOUTONS -->
+            <div class="flex items-center gap-3">
+
+                <a href="https://wa.me/237651487729?text=Bonjour%20LA%20CROIS%C3%89E,%20je%20souhaite%20des%20informations%20sur%20vos%20offres."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="bg-brand-accent hover:bg-green-700 text-white font-semibold px-4 py-2 sm:px-5 sm:py-2.5 rounded-full flex items-center gap-2 text-xs sm:text-sm shadow-md transition-all">
+
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span class="hidden sm:inline">WhatsApp</span>
+
+                </a>
+
+                <!-- MENU MOBILE -->
+                <button id="menuButton"
+                        class="md:hidden text-brand-blue text-2xl p-2"
+                        aria-label="Ouvrir le menu"
+                        aria-expanded="false">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- NAVIGATION MOBILE -->
+        <nav id="mobileMenu" class="mobile-menu hidden md:hidden bg-white border-t border-slate-100 shadow-lg">
+
+            <div class="flex flex-col px-6 py-4 gap-4 text-sm font-semibold text-slate-600">
+
+                <a href="#accueil" class="mobile-link hover:text-brand-blue">Accueil</a>
+                <a href="#biens" class="mobile-link hover:text-brand-blue">Biens immobiliers</a>
+                <a href="#services" class="mobile-link hover:text-brand-blue">Nos services</a>
+                <a href="#avis" class="mobile-link hover:text-brand-blue">Avis clients</a>
+                <a href="#contact" class="mobile-link hover:text-brand-blue">Contact</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="accueil" class="relative bg-gradient-to-br from-brand-blue via-slate-900 to-brand-blue text-white py-16 sm:py-24 lg:py-28 px-4 overflow-hidden">
+
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+
+            <span class="inline-block bg-brand-gold/20 text-brand-gold text-[11px] sm:text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider mb-6 border border-brand-gold/30">
+
+                Votre Partenaire Immobilier de Confiance
+
+            </span>
+
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+
+                Trouvez le bien idéal à
+                <span class="text-brand-gold">Yaoundé</span>
+
+            </h1>
+
+            <p class="text-slate-300 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto mb-8 sm:mb-10">
+
+                Appartements haut standing, villas d'exception, terrains titrés et résidences meublées.
+
+            </p>
+
+
+            <!-- FILTRE -->
+            <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-2xl text-slate-800 max-w-4xl mx-auto">
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+
+                    <div>
+
+                        <label class="block text-xs font-bold text-slate-500 text-left mb-1 uppercase">
+                            Type de bien
+                        </label>
+
+                        <select id="typeFilter"
+                                class="w-full bg-slate-100 border border-slate-200 rounded-lg px-3 py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-brand-blue">
+
+                            <option value="all">Tous les biens</option>
+                            <option value="Appartement">Appartement</option>
+                            <option value="Villa">Villa</option>
+                            <option value="Terrain">Terrain Titré</option>
+
+                        </select>
+
+                    </div>
+
+                    <div>
+
+                        <label class="block text-xs font-bold text-slate-500 text-left mb-1 uppercase">
+                            Quartier
+                        </label>
+
+                        <select id="locationFilter"
+                                class="w-full bg-slate-100 border border-slate-200 rounded-lg px-3 py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-brand-blue">
+
+                            <option value="all">Tous les quartiers</option>
+                            <option value="Bastos">Bastos</option>
+                            <option value="Odza">Odza</option>
+                            <option value="Santa Barbara">Santa Barbara</option>
+
+                        </select>
+
+                    </div>
+
+                    <div>
+
+                        <label class="block text-xs font-bold text-slate-500 text-left mb-1 uppercase">
+                            Action
+                        </label>
+
+                        <button onclick="filterProperties()"
+                                class="w-full bg-brand-blue text-white font-bold py-3 rounded-lg text-sm hover:bg-slate-800 transition-colors flex items-center justify-center gap-2">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Rechercher
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BIENS IMMOBILIERS ================= -->
+
+    <section id="biens" class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12">
+
+            <div>
+
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-blue">
+                    Biens en Vedette
+                </h2>
+
+                <p class="text-slate-500 mt-1 text-xs sm:text-sm">
+                    Découvrez nos opportunités vérifiées à Yaoundé.
+                </p>
+
+            </div>
+
+            <span id="resultCount" class="text-xs font-semibold text-slate-400 mt-2 sm:mt-0">
+                Affichage de tous nos biens
+            </span>
+
+        </div>
+
+
+        <div id="propertyGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+
+            <!-- BIEN 1 -->
+
+            <div class="property-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col"
+                 data-type="Appartement"
+                 data-location="Bastos">
+
+                <div class="relative h-48 sm:h-56 overflow-hidden">
+
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
+                         alt="Appartement Bastos"
+                         loading="lazy"
+                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+
+                    <span class="absolute top-3 left-3 bg-brand-blue text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">
+                        Location
+                    </span>
+
+                    <span class="absolute top-3 right-3 bg-white/90 text-brand-blue text-[10px] font-extrabold px-2.5 py-1 rounded-full">
+                        Bastos
+                    </span>
+
+                </div>
+
+                <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+
+                    <div>
+
+                        <h3 class="font-bold text-base sm:text-lg text-slate-900 mb-1">
+                            Appartement Duplex Haut Standing
+                        </h3>
+
+                        <p class="text-slate-500 text-xs mb-3 flex items-center gap-1">
+                            <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                            Bastos, Yaoundé
+                        </p>
+
+                        <div class="flex flex-wrap items-center gap-3 text-xs font-semibold text-slate-600 mb-4 bg-slate-50 p-2.5 rounded-lg">
+
+                            <span>
+                                <i class="fa-solid fa-bed text-brand-blue mr-1"></i>
+                                3 Chambres
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-bath text-brand-blue mr-1"></i>
+                                2 Douches
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-center justify-between border-t border-slate-100 pt-3">
+
+                        <div>
+                            <span class="text-[10px] text-slate-400 block">Prix / mois</span>
+
+                            <span class="text-base sm:text-lg font-extrabold text-brand-blue">
+                                450 000 <span class="text-xs font-normal">FCFA</span>
+                            </span>
+                        </div>
+
+                        <a href="https://wa.me/237651487729?text=Je%20suis%20int%C3%A9ress%C3%A9%20par%20l%27Appartement%20Duplex%20%C3%A0%20Bastos"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Contacter pour l'appartement">
+
+                            <span class="bg-brand-blue/10 text-brand-blue hover:bg-brand-blue hover:text-white p-3 rounded-xl inline-flex transition-colors">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BIEN 2 -->
+
+            <div class="property-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col"
+                 data-type="Villa"
+                 data-location="Santa Barbara">
+
+                <div class="relative h-48 sm:h-56 overflow-hidden">
+
+                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80"
+                         alt="Villa Santa Barbara"
+                         loading="lazy"
+                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+
+                    <span class="absolute top-3 left-3 bg-brand-gold text-slate-900 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">
+                        Vente
+                    </span>
+
+                    <span class="absolute top-3 right-3 bg-white/90 text-brand-blue text-[10px] font-extrabold px-2.5 py-1 rounded-full">
+                        Santa Barbara
+                    </span>
+
+                </div>
+
+                <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+
+                    <div>
+
+                        <h3 class="font-bold text-base sm:text-lg text-slate-900 mb-1">
+                            Villa Moderne avec Piscine
+                        </h3>
+
+                        <p class="text-slate-500 text-xs mb-3 flex items-center gap-1">
+                            <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                            Santa Barbara, Yaoundé
+                        </p>
+
+                        <div class="flex flex-wrap items-center gap-3 text-xs font-semibold text-slate-600 mb-4 bg-slate-50 p-2.5 rounded-lg">
+
+                            <span>
+                                <i class="fa-solid fa-bed text-brand-blue mr-1"></i>
+                                5 Chambres
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-swimming-pool text-brand-blue mr-1"></i>
+                                Piscine
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-center justify-between border-t border-slate-100 pt-3">
+
+                        <div>
+                            <span class="text-[10px] text-slate-400 block">Prix de vente</span>
+
+                            <span class="text-base sm:text-lg font-extrabold text-brand-blue">
+                                120 000 000 <span class="text-xs font-normal">FCFA</span>
+                            </span>
+                        </div>
+
+                        <a href="https://wa.me/237651487729?text=Je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20Villa%20%C3%A0%20Santa%20Barbara"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Contacter pour la villa">
+
+                            <span class="bg-brand-blue/10 text-brand-blue hover:bg-brand-blue hover:text-white p-3 rounded-xl inline-flex transition-colors">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BIEN 3 -->
+
+            <div class="property-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col"
+                 data-type="Terrain"
+                 data-location="Odza">
+
+                <div class="relative h-48 sm:h-56 overflow-hidden">
+
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
+                         alt="Terrain Odza"
+                         loading="lazy"
+                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+
+                    <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">
+                        Terrain Titré
+                    </span>
+
+                    <span class="absolute top-3 right-3 bg-white/90 text-brand-blue text-[10px] font-extrabold px-2.5 py-1 rounded-full">
+                        Odza
+                    </span>
+
+                </div>
+
+                <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+
+                    <div>
+
+                        <h3 class="font-bold text-base sm:text-lg text-slate-900 mb-1">
+                            Parcelle Constructible 500 m²
+                        </h3>
+
+                        <p class="text-slate-500 text-xs mb-3 flex items-center gap-1">
+                            <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                            Odza, Yaoundé
+                        </p>
+
+                        <div class="flex flex-wrap items-center gap-3 text-xs font-semibold text-slate-600 mb-4 bg-slate-50 p-2.5 rounded-lg">
+
+                            <span>
+                                <i class="fa-solid fa-ruler-combined text-brand-blue mr-1"></i>
+                                500 m²
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-file-contract text-brand-blue mr-1"></i>
+                                Titre Foncier
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-center justify-between border-t border-slate-100 pt-3">
+
+                        <div>
+                            <span class="text-[10px] text-slate-400 block">Prix / m²</span>
+
+                            <span class="text-base sm:text-lg font-extrabold text-brand-blue">
+                                35 000 <span class="text-xs font-normal">FCFA / m²</span>
+                            </span>
+                        </div>
+
+                        <a href="https://wa.me/237651487729?text=Je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20terrain%20%C3%A0%20Odza"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Contacter pour le terrain">
+
+                            <span class="bg-brand-blue/10 text-brand-blue hover:bg-brand-blue hover:text-white p-3 rounded-xl inline-flex transition-colors">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MESSAGE AUCUN RESULTAT -->
+        <div id="noResults" class="hidden text-center py-12">
+
+            <i class="fa-solid fa-house-circle-exclamation text-4xl text-slate-300 mb-4"></i>
+
+            <h3 class="text-lg font-bold text-slate-700">
+                Aucun bien trouvé
+            </h3>
+
+            <p class="text-sm text-slate-500 mt-2">
+                Essayez de modifier vos critères de recherche.
+            </p>
+
+            <button onclick="resetFilters()"
+                    class="mt-5 bg-brand-blue text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800">
+
+                Réinitialiser les filtres
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section id="services" class="bg-slate-100 py-12 sm:py-16">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-blue">
+                    Nos Services Immobiliers
+                </h2>
+
+                <p class="text-slate-500 text-xs sm:text-sm mt-2">
+                    Un accompagnement sur-mesure pour tous vos projets à Yaoundé.
+                </p>
+
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+
+
+                <!-- SERVICE 1 -->
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+
+                    <div class="w-12 h-12 bg-brand-blue/10 text-brand-blue rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-house-circle-check"></i>
+                    </div>
+
+                    <h3 class="font-bold text-base sm:text-lg mb-2">
+                        Vente & Achat
+                    </h3>
+
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        Achat et vente de terrains titrés, maisons et résidences. Vérification rigoureuse des titres fonciers.
+                    </p>
+
+                </div>
+
+
+                <!-- SERVICE 2 -->
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+
+                    <div class="w-12 h-12 bg-brand-gold/20 text-brand-gold rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+
+                    <h3 class="font-bold text-base sm:text-lg mb-2">
+                        Gestion Locative
+                    </h3>
+
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        Gestion complète de vos biens immobiliers à Yaoundé : recherche de locataires solvables et suivi des loyers.
+                    </p>
+
+                </div>
+
+
+                <!-- SERVICE 3 -->
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-building-user"></i>
+                    </div>
+
+                    <h3 class="font-bold text-base sm:text-lg mb-2">
+                        Conseil & BTP
+                    </h3>
+
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        Évaluation immobilière, conseils en investissement et accompagnement dans vos travaux de bâtiment (BTP).
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= AVIS CLIENTS ================= -->
+
+    <section id="avis" class="py-12 sm:py-16 bg-white">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+
+                <span class="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest block mb-1">
+                    Avis Vérifiés
+                </span>
+
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-blue">
+                    Ce que disent nos clients
+                </h2>
+
+
+                <!-- NOTE GOOGLE -->
+
+                <div class="inline-flex items-center gap-2.5 bg-slate-50 border border-slate-200 rounded-full px-4 py-2 mt-4 shadow-sm">
+
+                    <img src="https://www.svgrepo.com/show/475656/google-color.svg"
+                         alt="Google"
+                         class="w-5 h-5">
+
+                    <span class="text-base sm:text-lg font-extrabold text-slate-800">
+                        4,6
+                    </span>
+
+                    <div class="flex text-amber-400 text-xs gap-0.5">
+
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+
+                    </div>
+
+                    <span class="text-xs text-slate-500 font-medium">
+                        (32 avis)
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+
+
+                <!-- AVIS 1 -->
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+
+                    <div>
+
+                        <div class="flex items-center gap-3 mb-3">
+
+                            <div class="w-10 h-10 rounded-full bg-purple-600 text-white font-bold flex items-center justify-center text-sm">
+                                R
+                            </div>
+
+                            <div>
+
+                                <h4 class="font-bold text-slate-900 text-sm">
+                                    Rene Ekani
+                                </h4>
+
+                                <div class="flex text-amber-400 text-xs mt-0.5">
+
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <p class="text-slate-600 text-xs leading-relaxed italic">
+
+                            « La qualité d'accueil, le professionalisme, la performance et l'humanisme définissent IMMO LA CROISÉE. Je la recommande à tous ceux et toutes celles qui sollicitent des services dans l'immobilier et le BTP. Allez de l'avant. »
+
+                        </p>
+
+                    </div>
+
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[10px] text-slate-400">
+
+                        <span>Avis Google</span>
+                        <span>Il y a 3 ans</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AVIS 2 -->
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+
+                    <div>
+
+                        <div class="flex items-center gap-3 mb-3">
+
+                            <div class="w-10 h-10 rounded-full bg-rose-600 text-white font-bold flex items-center justify-center text-sm">
+                                V
+                            </div>
+
+                            <div>
+
+                                <h4 class="font-bold text-slate-900 text-sm">
+                                    Valérie N.
+                                </h4>
+
+                                <div class="flex text-amber-400 text-xs mt-0.5">
+
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <p class="text-slate-600 text-xs leading-relaxed italic">
+
+                            « Une agence très sérieuse à Yaoundé. Accompagnement irréprochable du début à la fin pour la gestion de mon bien immobilier. Je recommande vivement ! »
+
+                        </p>
+
+                    </div>
+
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[10px] text-slate-400">
+
+                        <span>Avis Google</span>
+                        <span>Il y a 1 an</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AVIS 3 -->
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+
+                    <div>
+
+                        <div class="flex items-center gap-3 mb-3">
+
+                            <div class="w-10 h-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm">
+                                M
+                            </div>
+
+                            <div>
+
+                                <h4 class="font-bold text-slate-900 text-sm">
+                                    Marc A.
+                                </h4>
+
+                                <div class="flex text-amber-400 text-xs mt-0.5">
+
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <p class="text-slate-600 text-xs leading-relaxed italic">
+
+                            « Service rapide et transparent pour la recherche d'un terrain titré. Équipe dynamique et très à l'écoute des besoins du client. »
+
+                        </p>
+
+                    </div>
+
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[10px] text-slate-400">
+
+                        <span>Avis Google</span>
+                        <span>Il y a 6 mois</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="contact" class="bg-slate-900 text-white mt-auto pt-12 pb-8 border-t border-slate-800">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+
+
+                <!-- COLONNE 1 : A PROPOS -->
+
+                <div class="space-y-4">
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="w-10 h-10 bg-brand-blue rounded-xl flex items-center justify-center text-brand-gold font-bold text-lg border border-brand-gold/30">
+                            LC
+                        </div>
+
+                        <span class="text-lg font-extrabold tracking-tight text-white">
+                            LA CROISÉE
+                        </span>
+
+                    </div>
+
+                    <p class="text-slate-400 text-xs leading-relaxed">
+
+                        Agence immobilière et entreprise BTP de référence basée à Yaoundé. Nous vous accompagnons dans la vente, location et gestion de biens.
+
+                    </p>
+
+
+                    <!-- RESEAUX SOCIAUX -->
+
+                    <div class="flex items-center gap-3 pt-2">
+
+                        <a href="https://facebook.com"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Facebook"
+                           class="w-10 h-10 bg-slate-800 hover:bg-blue-600 text-white rounded-lg flex items-center justify-center transition-colors">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                        </a>
+
+
+                        <a href="https://wa.me/237651487729"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="WhatsApp"
+                           class="w-10 h-10 bg-slate-800 hover:bg-green-600 text-white rounded-lg flex items-center justify-center transition-colors">
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                        </a>
+
+
+                        <a href="https://maps.google.com/?q=LA+CROISEE+Elig+Essono+Yaounde"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Google Maps"
+                           class="w-10 h-10 bg-slate-800 hover:bg-red-500 text-white rounded-lg flex items-center justify-center transition-colors">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COLONNE 2 : NAVIGATION -->
+
+                <div>
+
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-5 border-l-2 border-brand-gold pl-3">
+                        Navigation
+                    </h4>
+
+                    <ul class="space-y-3 text-xs text-slate-400">
+
+                        <li>
+                            <a href="#accueil" class="hover:text-brand-gold transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-angle-right text-[10px]"></i>
+                                Accueil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#biens" class="hover:text-brand-gold transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-angle-right text-[10px]"></i>
+                                Nos Biens en Vedette
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#services" class="hover:text-brand-gold transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-angle-right text-[10px]"></i>
+                                Services Immobilier & BTP
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#avis" class="hover:text-brand-gold transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-angle-right text-[10px]"></i>
+                                Avis Clients
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- COLONNE 3 : CONTACT -->
+
+                <div>
+
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-5 border-l-2 border-brand-gold pl-3">
+                        Contact & Horaires
+                    </h4>
+
+                    <ul class="space-y-4 text-xs text-slate-400">
+
+                        <li class="flex items-start gap-3">
+
+                            <i class="fa-solid fa-location-dot text-brand-gold mt-0.5"></i>
+
+                            <span>
+                                Elig-Essono, Yaoundé, Cameroun
+                            </span>
+
+                        </li>
+
+
+                        <li class="flex items-start gap-3">
+
+                            <i class="fa-solid fa-clock text-brand-gold mt-0.5"></i>
+
+                            <span>
+                                Lun - Sam : 08:00 - 18:00
+                            </span>
+
+                        </li>
+
+
+                        <li class="flex items-center gap-3">
+
+                            <i class="fa-solid fa-phone text-brand-gold"></i>
+
+                            <a href="tel:+237651487729"
+                               class="hover:text-white transition-colors">
+
+                                +237 651 48 77 29
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="flex items-center gap-3">
+
+                            <i class="fa-brands fa-whatsapp text-brand-gold"></i>
+
+                            <a href="https://wa.me/237651487729"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="hover:text-white transition-colors">
+
+                                Nous écrire sur WhatsApp
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- COLONNE 4 : LOCALISATION -->
+
+                <div>
+
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-5 border-l-2 border-brand-gold pl-3">
+                        Nous Trouver
+                    </h4>
+
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
+
+                        Venez nous rendre visite à nos bureaux à Elig-Essono, Yaoundé.
+
+                    </p>
+
+                    <a href="https://maps.google.com/?q=LA+CROISEE+Elig+Essono+Yaounde"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-3 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-xl px-4 py-3 text-xs font-semibold w-full justify-center transition-all">
+
+                        <i class="fa-solid fa-map-location-dot text-red-500 text-lg"></i>
+
+                        Ouvrir sur Google Maps
+
+                    </a>
+
+                    <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+
+                        <i class="fa-solid fa-clock text-brand-gold"></i>
+
+                        Ouvert de 08h à 18h
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SOUS FOOTER -->
+
+            <div class="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center sm:text-left">
+
+                <p>
+                    &copy; 2026 LA CROISÉE. Tous droits réservés.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-5">
+
+                    <a href="#" class="hover:text-slate-300 transition-colors">
+                        Mentions Légales
+                    </a>
+
+                    <a href="#" class="hover:text-slate-300 transition-colors">
+                        Politique de Confidentialité
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        // NUMERO WHATSAPP
+        const whatsappNumber = "237651487729";
+
+
+        // FILTRAGE DES BIENS
+        function filterProperties() {
+
+            const type = document.getElementById('typeFilter').value;
+
+            const location = document.getElementById('locationFilter').value;
+
+            const cards = document.querySelectorAll('.property-card');
+
+            const noResults = document.getElementById('noResults');
+
+            let count = 0;
+
+
+            cards.forEach(card => {
+
+                const cardType = card.getAttribute('data-type');
+
+                const cardLocation = card.getAttribute('data-location');
+
+
+                const matchType =
+                    type === 'all' || cardType === type;
+
+                const matchLocation =
+                    location === 'all' || cardLocation === location;
+
+
+                if (matchType && matchLocation) {
+
+                    card.style.display = 'flex';
+
+                    count++;
+
+                } else {
+
+                    card.style.display = 'none';
+
+                }
+
+            });
+
+
+            document.getElementById('resultCount').textContent =
+                `${count} bien(s) trouvé(s)`;
+
+
+            if (count === 0) {
+
+                noResults.classList.remove('hidden');
+
+            } else {
+
+                noResults.classList.add('hidden');
+
+            }
+
+        }
+
+
+        // REINITIALISER LES FILTRES
+        function resetFilters() {
+
+            document.getElementById('typeFilter').value = 'all';
+
+            document.getElementById('locationFilter').value = 'all';
+
+            filterProperties();
+
+        }
+
+
+        // FILTRAGE AUTOMATIQUE
+        document.getElementById('typeFilter').addEventListener(
+            'change',
+            filterProperties
+        );
+
+        document.getElementById('locationFilter').addEventListener(
+            'change',
+            filterProperties
+        );
+
+
+        // MENU MOBILE
+        const menuButton = document.getElementById('menuButton');
+
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        const menuIcon = menuButton.querySelector('i');
+
+
+        menuButton.addEventListener('click', () => {
+
+            const isHidden = mobileMenu.classList.contains('hidden');
+
+            mobileMenu.classList.toggle('hidden');
+
+            menuButton.setAttribute('aria-expanded', isHidden);
+
+            menuIcon.classList.toggle('fa-bars');
+
+            menuIcon.classList.toggle('fa-xmark');
+
+        });
+
+
+        // FERMER LE MENU APRES UN CLIC
+        document.querySelectorAll('.mobile-link').forEach(link => {
+
+            link.addEventListener('click', () => {
+
+                mobileMenu.classList.add('hidden');
+
+                menuButton.setAttribute('aria-expanded', 'false');
+
+                menuIcon.classList.remove('fa-xmark');
+
+                menuIcon.classList.add('fa-bars');
+
+            });
+
+        });
+
+
+        // INITIALISATION
+        filterProperties();
+
+    </script>
+
+</body>
+</html>
